@@ -42,7 +42,7 @@
         { letter: 'Z', frequency: 0.00074 },
       ];
 
-      let bli = BarChart(alphabet, {
+      let chart = BarChart(alphabet, {
         x: (d) => d.letter,
         y: (d) => d.frequency,
         xDomain: d3.groupSort(
@@ -64,7 +64,7 @@
         .attr('width', width)
         .attr('height', height)
         .node()
-        .appendChild(bli);
+        .appendChild(chart);
 
       function BarChart(
         data,
